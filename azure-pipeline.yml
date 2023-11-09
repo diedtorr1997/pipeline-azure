@@ -1,0 +1,17 @@
+name: Pipeline Operativo
+variables:
+  AWS_REGION: 'us-east-1'
+  AWS_ACCESS_KEY_ID: 'ASIAQMH45WRE4IIT6GGQ'
+  AWS_SECRET_ACCESS_KEY: 'iuc8SfCK8Gol7FUs1palY7bqHxObXZSfNRDSH1j9'
+
+stages:
+  - stage: PersistData
+    jobs:
+      - job: PersistDataJob
+        steps:
+          - script: |
+              aws dynamodb put-item \
+                --region $(AWS_REGION) \
+                --table-name modulo-digitales-dev-sender-email \
+                --item '{"channelId": {"S": "123"}, "transactionCode": {"S": "cod-1"}, "pathTemplate": {"N": "https://"}, "recipients": {"N": "diego@bancolombia.com.co"}}'
+            displayName: 'Guardar en DynamoDB'
