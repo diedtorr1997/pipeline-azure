@@ -1,8 +1,8 @@
 name: Pipeline Operativo
 variables:
   AWS_REGION: 'us-east-1'
-  AWS_ACCESS_KEY_ID: 'ASIAQMH45WRE4IIT6GGQ'
-  AWS_SECRET_ACCESS_KEY: 'iuc8SfCK8Gol7FUs1palY7bqHxObXZSfNRDSH1j9'
+  AWS_ACCESS_KEY_ID: 'ASIAQMH45WRE4TKAWCAX'
+  AWS_SECRET_ACCESS_KEY: 'BAtWXtwnkD9LLiiGR0MVq614Ks16v29K9HmxpLxP'
 
 stages:
   - stage: PersistData
